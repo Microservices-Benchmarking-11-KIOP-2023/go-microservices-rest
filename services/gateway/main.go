@@ -121,8 +121,8 @@ func (g *Gateway) searchHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	var (
 		port           = flag.Int("port", 8080, "The service port")
-		profileAddress = flag.String("profileAddress", "http://localhost:8084", "Profile service address")
-		searchAddress  = flag.String("searchAddress", "http://localhost:8081", "Search service address")
+		profileAddress = flag.String("profileAddress", "http://profile:8084", "Profile service address")
+		searchAddress  = flag.String("searchAddress", "http://search:8081", "Search service address")
 	)
 	flag.Parse()
 
