@@ -1,6 +1,6 @@
 services:
   gateway:
-    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-gateway:latest
+    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-gateway-rest:latest
     build: services/gateway
     ports:
       - "5000:8080"
@@ -8,17 +8,17 @@ services:
       - search
       - profile
   search:
-    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-search:latest
+    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-search-rest:latest
     build: services/search
     depends_on:
       - geo
       - rate
   profile:
-    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-profile:latest
+    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-profile-rest:latest
     build: services/profile
   geo:
-    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-geo:latest
+    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-geo-rest:latest
     build: services/geo
   rate:
-    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-rate:latest
+    image: ghcr.io/microservices-benchmarking-11-kiop-2023/go-rate-rest:latest
     build: services/rate
