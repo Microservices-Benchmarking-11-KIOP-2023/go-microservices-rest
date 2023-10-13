@@ -11,9 +11,9 @@ import (
 )
 
 func main() {
-	port := flag.Int("port", 8081, "The service port")
-	geoaddr := flag.String("geoaddr", "http://geo:8082/nearby", "Geo server addr")
-	rateaddr := flag.String("rateaddr", "http://rate:8083/rates", "Rate server addr")
+	port := flag.Int("port", 8080, "The service port")
+	geoaddr := flag.String("geoaddr", "http://geo:8080/nearby", "Geo server addr")
+	rateaddr := flag.String("rateaddr", "http://rate:8080/rates", "Rate server addr")
 	flag.Parse()
 
 	http.HandleFunc("/nearby", func(w http.ResponseWriter, r *http.Request) {

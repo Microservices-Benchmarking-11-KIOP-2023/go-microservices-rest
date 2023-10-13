@@ -46,7 +46,7 @@ type stay struct {
 var rateTable map[stay]*RatePlan
 
 func main() {
-	port := flag.Int("port", 8083, "The service port")
+	port := flag.Int("port", 8080, "The service port")
 	flag.Parse()
 
 	rateTable = loadRateTable("data/inventory.json")

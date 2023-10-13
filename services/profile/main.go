@@ -83,5 +83,5 @@ func main() {
 	profileServer := &Profile{Profiles: profiles}
 
 	http.Handle("/profile", profileServer)
-	log.Fatal(http.ListenAndServe(":8084", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
